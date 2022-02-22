@@ -1,0 +1,7 @@
+{
+  "name": "multipages",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

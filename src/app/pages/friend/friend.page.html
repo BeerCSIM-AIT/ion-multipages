@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>friend</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <ion-label>My Friends</ion-label>
+            <ion-button>See All</ion-button>
+        </ion-list-header>
+        <ion-item *ngFor="let f of friends" (click)="showDetails(f)">
+            <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+            <ion-label>
+                <h2>{{f.name}}</h2> 
+                <p>{{f.email}}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-button (click)="goBack()" expand="block" fill="clear" shape="round">
+        Back
+    </ion-button>
+</ion-content>

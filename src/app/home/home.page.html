@@ -7,14 +7,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="showhead">
+        <img src="https://ionicframework.com/img/meta/logo.png" alt="">
+        <p>
+            Welcome to Multiple App
+        </p>
+    </div>
+    <ion-list>
+        <ion-item (click)="goToAbout()">
+            <ion-icon slot="start" name="person-circle-outline"></ion-icon> About Me
+        </ion-item>
+        <ion-item routerLink="/friend">
+            <ion-icon slot="start" name="people-circle-outline"></ion-icon> Friend List
+        </ion-item>
+        <ion-item>
+            <ion-icon slot="start" name="images-outline"></ion-icon> Favorite Places
+        </ion-item>
+        <ion-item>
+            <ion-icon slot="start" name="planet-outline"></ion-icon> Social Media
+        </ion-item>
+    </ion-list>
 </ion-content>
